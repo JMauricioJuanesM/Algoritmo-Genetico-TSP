@@ -1,4 +1,4 @@
-/*
+  /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -115,9 +115,9 @@ public class Individuo {
         this.fitness = 0;
         int temp = 0;
         for(int i=0;i<fenotipo.length-1;i++){
-            temp += matrizDistancias[fenotipo[i]][fenotipo[i+1]];
+            temp += matrizDistancias[fenotipo[i]][fenotipo[i+1]]*matrizInclinaciones[fenotipo[i]][fenotipo[i+1]];
         }
-        temp += matrizDistancias[fenotipo[0]][fenotipo[fenotipo.length-1]];
+        temp += matrizDistancias[fenotipo[0]][fenotipo[fenotipo.length-1]]*matrizInclinaciones[fenotipo[0]][fenotipo[fenotipo.length-1]];
         this.fitness = temp;
     }
 
