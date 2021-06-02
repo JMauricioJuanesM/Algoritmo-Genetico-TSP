@@ -133,7 +133,7 @@ public class Individuo {
      */
     public void setGenotipo(int[][] genotipo) {
         this.genotipo = genotipo;
-    }
+    } 
 
     /**
      * @return the fenotipo
