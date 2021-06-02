@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-//package geneticos2021;
+package geneticos2021;
 
 import data.LeerDatos;
 import java.io.BufferedWriter;
@@ -30,9 +30,10 @@ public class Geneticos20212 {
         int ciudadInicial = 0;
        
         //GeneticoBinario gb = new GeneticoBinario(500, 200, 0.12, 64, LeerDatos.getFenotipos());
-        GeneticoBinario gb = new GeneticoBinario(250, 200, 0.12, 500, matrizDistancias, matrizInclinaciones, ciudadInicial);
+        GeneticoBinario gb = new GeneticoBinario(250, 200, 0.12, 50, matrizDistancias, matrizInclinaciones, ciudadInicial);
 
         gb.evolucionar();
+        
         System.out.println(Herramientas.mejorPoblacion(gb.getPoblacionActual(), matrizDistancias, ciudadInicial, matrizInclinaciones));
     }
 }

@@ -125,7 +125,7 @@ public class Individuo {
      * @return the genotipo
      */
     public int[][] getGenotipo() {
-        return genotipo;
+        return genotipo; 
     } 
 
     /**

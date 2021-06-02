@@ -1,0 +1,11 @@
+{
+    "java.project.sourcePaths": [
+        "geneticos2021",
+        ""
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/home/mauriciojuanes/J. Mauricio Juanes M./UPIIZ-IPN/6TO/GA/Geneticos2021-2-master/lib/jfreechart-1.0.19.jar",
+        "/home/mauriciojuanes/J. Mauricio Juanes M./UPIIZ-IPN/6TO/GA/Geneticos2021-2-master/lib/jcommon-1.0.23.jar"
+    ]
+}
