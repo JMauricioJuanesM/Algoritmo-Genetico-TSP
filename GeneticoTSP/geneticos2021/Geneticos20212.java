@@ -27,13 +27,13 @@ public class Geneticos20212 {
 
         int[][] matrizDistancias = LeerDatos.getMatriz();
         int[][] matrizInclinaciones = LeerDatos.getMatriz();
-        int ciudadInicial = 0;
+        int ciudadInicial = 1;
        
         //GeneticoBinario gb = new GeneticoBinario(500, 200, 0.12, 64, LeerDatos.getFenotipos());
         GeneticoBinario gb = new GeneticoBinario(250, 200, 0.12, 50, matrizDistancias, matrizInclinaciones, ciudadInicial);
 
         gb.evolucionar();
-        
+
         System.out.println(Herramientas.mejorPoblacion(gb.getPoblacionActual(), matrizDistancias, ciudadInicial, matrizInclinaciones));
     }
 }
