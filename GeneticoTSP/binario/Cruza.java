@@ -17,7 +17,7 @@ import java.util.List;
 public class Cruza {
 
     public static Individuo cruzaPorMascaraBinaria(Individuo madre, Individuo padre, int[] mask,
-            int[][] matrizDistancias, int ciudadInicial, int[][] matrizInclinaciones) {
+    double[][] matrizDistancias, int ciudadInicial, double[][] matrizInclinaciones) {
         int n = madre.getFenotipo().length;
         int[] gen1 = new int[n];
         ArrayList<Integer> g1 = new ArrayList<Integer>();

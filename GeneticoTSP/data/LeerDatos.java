@@ -65,10 +65,10 @@ public class LeerDatos {
         return instancias;
     }
 
-    public static int[][] getMatriz(){
+    public static double[][] getMatriz(){
         ArrayList<Individuo> instancias = new ArrayList<>();
         LinkedList<String> fenotipos = new LinkedList();
-        int[][] fen = null;
+        double[][] fen = null;
         String texto, aux;
 
         try {
@@ -90,13 +90,13 @@ public class LeerDatos {
                 }
                 lee.close();//cierra el archivo
 
-                ArrayList<Integer> fenotipos2 = new ArrayList();
+                ArrayList<Double> fenotipos2 = new ArrayList();
                 int tam = fenotipos.size();
-                fen = new int[tam][tam];
+                fen = new double[tam][tam];
                 for (int i = 0; i < tam; i++) {
                     StringTokenizer st = new StringTokenizer(fenotipos.get(i), ",");
                     while (st.hasMoreTokens()) {
-                        fenotipos2.add(Integer.parseInt(st.nextToken()));
+                        fenotipos2.add(Double.parseDouble(st.nextToken()));
                     }
 
                     for(int y=0;y<tam;y++){

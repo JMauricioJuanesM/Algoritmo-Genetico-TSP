@@ -14,7 +14,7 @@ import java.util.Random;
  */
 public class Seleccion {
     
-    public static Individuo seleccionAleatoria(ArrayList<Individuo> pob, int[][] matrizDistancias, int ciudadInicial, int[][] matrizInclinaciones){
+    public static Individuo seleccionAleatoria(ArrayList<Individuo> pob, double[][] matrizDistancias, int ciudadInicial, double[][] matrizInclinaciones){
         Random ran = new Random();
         int pos = ran.nextInt(pob.size());
         return new Individuo(pob.get(pos), matrizDistancias, ciudadInicial, matrizInclinaciones);

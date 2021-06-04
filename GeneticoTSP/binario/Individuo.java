@@ -20,11 +20,11 @@ public class Individuo {
     private int[] fenotipo;
     private int fitness;
     private int ciudadInicial;
-    private int[][] matrizDistancias;
-    private int[][] matrizInclinaciones;
+    private double[][] matrizDistancias;
+    private double[][] matrizInclinaciones;
     
 
-    public Individuo(int n, int[][] matrizDistancias, int ciudadInicial, int[][] matrizInclinaciones) {
+    public Individuo(int n, double[][] matrizDistancias, int ciudadInicial, double[][] matrizInclinaciones) {
         this.n = n;
         this.genotipo = new int[n][n];
         this.fenotipo = new int[n];
@@ -37,7 +37,7 @@ public class Individuo {
         calcularFitness();
     }
     
-    public Individuo(int[][] gen, int[][] matrizDistancias, int ciudadInicial, int[][] matrizInclinaciones) {
+    public Individuo(int[][] gen, double[][] matrizDistancias, int ciudadInicial, double[][] matrizInclinaciones) {
         this.n = gen.length;
         this.genotipo = new int[n][n];
         this.fenotipo = new int[n];
@@ -50,7 +50,7 @@ public class Individuo {
         calcularFitness();
     }
 
-    public Individuo(int[] fen, int[][] matrizDistancias, int ciudadInicial, int[][] matrizInclinaciones) {
+    public Individuo(int[] fen, double[][] matrizDistancias, int ciudadInicial, double[][] matrizInclinaciones) {
         this.n = fen.length;
         this.genotipo = new int[n][n];
         this.fenotipo = fen.clone();
@@ -61,7 +61,7 @@ public class Individuo {
         calcularFitness();
     }
 
-    public Individuo(Individuo i, int[][] matrizDistancias, int ciudadInicial, int[][] matrizInclinaciones) {
+    public Individuo(Individuo i, double[][] matrizDistancias, int ciudadInicial, double[][] matrizInclinaciones) {
         //this.n = getGenotipo().length;
         
         this.genotipo = i.getGenotipo().clone();

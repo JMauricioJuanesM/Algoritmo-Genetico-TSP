@@ -25,11 +25,11 @@ public class GeneticoBinario {
     private ArrayList<Individuo> poblacionActual;
     private ArrayList<Integer> bestFitness = new ArrayList<Integer>(numGeneraciones);
     private Boolean poblacionFromFile = false;
-    private int[][] matrizDistancias;
-    private int[][] matrizInclinaciones;
+    private double[][] matrizDistancias;
+    private double[][] matrizInclinaciones;
     
 
-    public GeneticoBinario(int tamanoPob, int numGeneraciones, double probMuta,int bits, int[][] matrizDistancias, int[][] matrizInclinaciones, int ciudadInicial) {
+    public GeneticoBinario(int tamanoPob, int numGeneraciones, double probMuta,int bits, double[][] matrizDistancias, double[][] matrizInclinaciones, int ciudadInicial) {
         this.tamanoPob = tamanoPob;
         this.numGeneraciones = numGeneraciones;
         this.probMuta = probMuta;

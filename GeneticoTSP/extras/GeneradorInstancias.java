@@ -15,20 +15,21 @@ import java.util.StringTokenizer;
 
 public class GeneradorInstancias{
 
-    public static int[][] generarMatrizDistancias(int n, int tope){
-        int[][] matriz = new int[n][n];
+    public static double[][] generarMatrizDistancias(int n, int tope){
+        double[][] matriz = new double[n][n];
         Random ran = new Random();
         for(int x=0; x<n;x++)
             for(int y=0; y < n; y++){
                 if(x!=y && matriz[x][y]==0) {
-                int v = ran.nextInt(tope)+1;
+                double v = ran.nextInt(tope)+1;
                 matriz[x][y] = v;
-                matriz[y][x] = v;
+                matriz[y][x] = 1/v;
+                System.out.println(matriz[y][x]);
                 }
             }
         return matriz;
     }
-    public static void guardarMatriz(int[][] m, String nombre){
+    public static void guardarMatriz(double[][] m, String nombre){
         FileWriter fichero = null;
         PrintWriter pw = null;
         try
@@ -105,6 +106,10 @@ public class GeneradorInstancias{
       
         fr.close();
         return matriz;
+    }
+
+    public static void main(String[] args) {
+        guardarMatriz(generarMatrizDistancias(50, 90),"MatrizInclinaciones.txt");
     }
 
 }

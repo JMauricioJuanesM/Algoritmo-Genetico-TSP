@@ -84,14 +84,14 @@ public class Herramientas {
         return (int) ((Math.random() * (max - min)) + min);
     }
 
-    public static Individuo mejorPoblacion(ArrayList<Individuo> pob, int[][] matrizDistancias, int ciudadInicial, int[][] matrizInclinaciones){
+    public static Individuo mejorPoblacion(ArrayList<Individuo> pob, double[][] matrizDistancias, int ciudadInicial, double[][] matrizInclinaciones){
         Individuo mejor = new Individuo(pob.get(0),matrizDistancias, ciudadInicial, matrizInclinaciones);
         for(Individuo aux: pob){
             if (aux.getFitness()< mejor.getFitness()){
                 mejor = new Individuo(aux, matrizDistancias, ciudadInicial, matrizInclinaciones);
             }
         }
-        System.out.print("Fenotipo: ");
+        /*System.out.print("Fenotipo: ");
         String fenotipo = "";
         for(int i = 0;i<mejor.getFenotipo().length;i++){
             System.out.print(mejor.getFenotipo()[i]);
@@ -100,7 +100,7 @@ public class Herramientas {
             }else{
                 fenotipo+=mejor.getFenotipo()[i]+",";
             }
-        }
+        }*/
 
         // try {
         //     bw.write(fenotipo+"\n");
@@ -115,7 +115,7 @@ public class Herramientas {
         return mejor;
     }
 
-    public static int mejorFitness(ArrayList<Individuo> pob, int[][] matrizDistancias, int ciudadInicial, int[][] matrizInclinaciones){
+    public static int mejorFitness(ArrayList<Individuo> pob, double[][] matrizDistancias, int ciudadInicial, double[][] matrizInclinaciones){
         Individuo mejor = new Individuo(pob.get(0),matrizDistancias, ciudadInicial, matrizInclinaciones);
         for(Individuo aux: pob){
             if (aux.getFitness()< mejor.getFitness()){
